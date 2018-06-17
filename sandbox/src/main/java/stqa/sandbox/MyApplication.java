@@ -4,28 +4,30 @@ class MyApplication {
 
   public static void main(String[] args) {
 
-    hello("world");
+    hello("World");
     hello("John");
     hello("Alex");
 
-    double l = 5;
-    System.out.println("Square area with " + l + " side is: " + area(l));
+    Square s = new Square(5);
 
-    double a = 3;
-    double b = 4;
-    System.out.println("Rectangle square area with " + a + " and " + b + " sides is: " + area(a, b));
+    System.out.println("Square area with " + s.l + " side is: " + s.area());
 
-  }
+    Rectangle r = new Rectangle(3, 4);
 
-  public static double area(double len) {
-    return len * len;
-  }
+    System.out.println("Rectangle square area with " + r.a + " and " + r.b + " sides is: " + r.area());
 
-  public static double area(double a, double b) {
-    return a * b;
+    Point a = new Point(3, 5);
+    Point b = new Point(21, 32);
+
+    System.out.println("Distants between points " + a.toString() + " and " + b.toString() + " is: " + distance(a, b));
+
   }
 
   public static void hello(String somebody) {
     System.out.println("Hello, " + somebody + "!");
+  }
+
+  public static double distance(Point p1, Point p2) {
+    return Math.sqrt((Math.pow((p2.x - p1.x), 2)) + (Math.pow((p2.y - p1.y), 2)));
   }
 }
