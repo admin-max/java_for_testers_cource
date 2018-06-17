@@ -18,4 +18,8 @@ public class Point {
   public String toString() {
     return "[" + this.x + "," + this.y + "]";
   }
+
+  public double distanceToOtherPoint(Point other) {
+    return Math.sqrt((Math.pow((other.x - this.x), 2)) + (Math.pow((other.y - this.y), 2)));
+  }
 }

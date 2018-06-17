@@ -16,10 +16,11 @@ class MyApplication {
 
     System.out.println("Rectangle square area with " + r.a + " and " + r.b + " sides is: " + r.area());
 
-    Point a = new Point(3, 5);
-    Point b = new Point(21, 32);
+    Point a = new Point(1, 0);
+    Point b = new Point(10, 0);
 
-    System.out.println("Distants between points " + a.toString() + " and " + b.toString() + " is: " + distance(a, b));
+    System.out.println("Distance between points " + a.toString() + " and " + b.toString() + " is: " + distance(a,b));
+    System.out.println("Distance from " + a.toString() + " to " + b.toString() + " is: " + a.distanceToOtherPoint(b));
 
   }
 
